@@ -57,8 +57,7 @@ def compute():
             
 
 @app.route('/plots')
-def plots(prob):
-    prob = list(map(float, prob))
+def plots():
     time_arr = []
     total_time_arr = []
     time_gp = -1/(prob[0] - 1)

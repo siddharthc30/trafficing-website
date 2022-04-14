@@ -12,6 +12,7 @@
         <title>
             trafficing website
         </title>
+        <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
     </head>
 
     <body>
@@ -31,10 +32,10 @@
     </body>
 
     <script>
-        Plotly.newPlot("state_plot", {{ state_plot | safe }})
+        Plotly.newPlot("state_plot", {{ state_time | safe }})
     </script>
     <script>
-        Plotly.newPlot("stage_plot", {{ stage_plot | safe }})
+        Plotly.newPlot("stage_plot", {{ stage_time | safe }})
     </script>
 
 </html>

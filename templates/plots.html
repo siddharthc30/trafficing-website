@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .content {
+            max-width: 900px;
+            margin: auto;
+            padding: 10px;
+            padding-top: 100px;
+        }
+    </style>
+    <head>
+        <title>
+            trafficing website
+        </title>
+    </head>
+
+    <body>
+        <div class = "content">
+            <div id="state_plot">
+
+            </div>
+
+            <br>
+            <br>
+            <div id="stage_plot">
+
+            </div>
+
+        </div>
+
+    </body>
+
+    <script>
+        Plotly.newPlot("state_plot", {{ state_plot | safe }})
+    </script>
+    <script>
+        Plotly.newPlot("stage_plot", {{ stage_plot | safe }})
+    </script>
+
+</html>

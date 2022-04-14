@@ -17,7 +17,7 @@
             max-width: 900px;
             margin: auto;
             padding: 10px;
-            padding-top: 200px;
+            padding-top: 100px;
         }
     </style>
     <head>
@@ -28,104 +28,108 @@
 
     <body>
         <div class = "content">
-            <form autocomplete = "off">
+            <form action = "/submit" method = "post" autocomplete = "on">
                 <p>
                     <label for="a">A (1, 1) No victimization has occurred. </label>
-                    <input id="a" type="text">
+                    <input name="a" type="text" required>
                 </p>
                 <br>
                 <p>
                     <label for="b">B (1, 2) Successful recruitment of individual. </label>
-                    <input id="b" type="text">
+                    <input name="b" type="text" required>
                 </p>
                 <br>
                 <p>
                     <label for="c">C (1, 6) Mortality risk for general population individuals. </label>
-                    <input id="c" type="text">
+                    <input name="c" type="text" required>
                 </p>
                 <br>
                 <br>
                 <p>
                     <label for="d">D (2, 2) Ongoing recruitment events, pre-exploitation. </label>
-                    <input id="d" type="text">
+                    <input name="d" type="text" required>
                 </p>
                 <br>
                 <p>
                     <label for="e">E (2, 3) Transition from recruitment to trafficking-exploitation activities. </label>
-                    <input id="e" type="text">
+                    <input name="e" type="text" required>
                 </p>
                 <br>
                 <p>
                     <label for="f">F (2, 4) Intervention event to recruited individual. </label>
-                    <input id="f" type="text">
+                    <input name="f" type="text" required>
                 </p>
                 <br>
                 <p>
                     <label for="g">G (2, 6) Mortality risk for recruited individuals.  </label>
-                    <input id="g" type="text">
+                    <input name="g" type="text" required>
                 </p>
                 <br>
                 <br>
                 <p>
                     <label for="h">H (3, 3) Ongoing trafficking-exploitation events.  </label>
-                    <input id="h" type="text">
+                    <input name="h" type="text" required>
                 </p>
                 <br>
                 <p>
                     <label for="i">I (3, 4) Intervention event to exploited individual.  </label>
-                    <input id="i" type="text">
+                    <input name="i" type="text" required>
                 </p>
                 <br>
                 <p>
                     <label for="j">J (3, 6) Mortality risk for exploited individuals.  </label>
-                    <input id="j" type="text">
+                    <input name="j" type="text" required>
                 </p>
                 <br>
                 <br>
 
                 <p>
                     <label for="k">K (4, 3) Unsuccessful intervention event.  (i.e. victim returns to exploitive situation).  </label>
-                    <input id="k" type="text">
+                    <input name="k" type="text" required>
                 </p>
                 <br>
                 <p>
                     <label for="l">L (4, 5) Successful intervention event. </label>
-                    <input id="l" type="text">
+                    <input name="l" type="text" required>
                 </p>
                 <br>
                 <br>
 
                 <p>
                     <label for="m">M (5, 3) Survivor's return to exploitation. (this does not include independent sex work) </label>
-                    <input id="m" type="text">
+                    <input name="m" type="text" required>
                 </p>
                 <br>
                 <p>
                     <label for="n">N (5, 5) Ongoing post-victimization status as a Survivor.  </label>
-                    <input id="n" type="text">
+                    <input name="n" type="text" required>
                 </p>
                 <br>
                 <p>
                     <label for="o">O (5, 6) Mortality risk for survivor individuals.   </label>
-                    <input id="o" type="text">
+                    <input name="o" type="text" required>
                 </p>
                 <br>
                 <br>
 
                 <p>
                     <label for="p">P (6, 6) Once death has occurred, the lifecycle is complete and Victim remains at death state.    </label>
-                    <input id="p" type="text">
+                    <input name="p" type="text" required>
                 </p>
                 <br>
-
-
-
 
                 <p>
                     <input type = "submit" name = "Submit" style="height:50px; width:100px">
                 </p>
                 
             </form>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for msg in messages %}
+                        <p>{{msg}}</p>
+                    {% endfor%}
+                {% endif %}
+            {% endwith %}
         </div>
 
     </body>

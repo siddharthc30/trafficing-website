@@ -79,9 +79,14 @@ def plots():
     time_postvict = time_inter + time_surv
     total_time_arr.append(time_postvict)
 
+    time_arr = [k/12 for k in time_arr]
+    total_time_arr = [t/12 for t in total_time_arr]
+
     x = plot_state_time(time_arr)
     y = plot_stage_time(total_time_arr)
+
     return render_template("plots.html", state_time = x, stage_time = y)
+    return redirect(request.referrer)
 
 
 if __name__ == "__main__":

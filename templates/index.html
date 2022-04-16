@@ -28,6 +28,42 @@
 
     <body>
         <div class = "content">
+            <h1>Inputs to assess Sex Trafficking Victimization Experience during Lifetime</h1>
+            <br>
+            <br>
+            <img src = "/static/images/model.png" align = "center">
+            <br>
+            <br>
+            <p>
+                <h3>
+                    Assumptions:
+                </h3>
+                <li>
+                    The Transition Probabilitiies are constant throughout the Individual's lifecycle. 
+                </li>
+                <li>
+                    The step size throughout the model is Monthly. The Transition Probabilities need to reflect this scale. 
+                </li>
+
+                <h3>
+                    Since the total probability of transitions from any given state (i.e. 1-6) totals 1, all but one value from each group needs to be known.
+                </h3>
+                <p>
+                    For Example: From the second group of arcs (i.e. D, E, F, G). Only three of these four arc values need known. The fourth value will be a remainder to make the group total equal to 1.0. 
+                </p>
+
+                <h3>
+                    Trafficking-Exploitation events comprise a subprocess that is summarized by State 3. The events occur relatively more quickly to the rest of the model.
+                </h3>
+                <h3>
+                    Since State 6 represents Death, which is an absorption state, probability P will always be 1.0
+                </h3>
+                <h3>
+                    Loose guideline from literature discussions: C < O < J
+                </h3>
+
+            </p>
+
             <form action = "/submit" method = "post" autocomplete = "on">
                 <p>
                     <label for="a">A (1, 1) No victimization has occurred. </label>
